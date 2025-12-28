@@ -49,7 +49,8 @@ const Navbar: React.FC = () => {
               ))}
             </ul>
             {!isScrolled && (
-              <div className="h-px w-24 bg-azpink mt-1 self-start opacity-40"></div>
+              /* Mantenemos el contenedor items-start pero alineamos la línea al final (self-end) para que quede bajo 'CONTACTO' */
+              <div className="h-px w-20 bg-azpink mt-1 self-end opacity-60"></div>
             )}
           </div>
         </div>
