@@ -20,38 +20,41 @@ const Navbar: React.FC = () => {
       isScrolled ? 'bg-white/95 backdrop-blur-lg shadow-xl py-1' : 'bg-transparent py-2 md:py-4'
     }`}>
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#hero" className="transition-all duration-500 transform hover:scale-105">
-          <img 
-            src={HEADER_LOGO_URL} 
-            alt="Alicia Zurita" 
-            className={`transition-all duration-700 object-contain ${
-                isScrolled ? 'h-8 md:h-10' : 'h-10 md:h-14 lg:h-16'
-            }`} 
-          />
-        </a>
+        {/* Left Side: Logo + Menu */}
+        <div className="flex items-center">
+          <a href="#hero" className="transition-all duration-500 transform hover:scale-105 mr-12 lg:mr-20">
+            <img 
+              src={HEADER_LOGO_URL} 
+              alt="Alicia Zurita" 
+              className={`transition-all duration-700 object-contain ${
+                  isScrolled ? 'h-8 md:h-10' : 'h-10 md:h-14 lg:h-16'
+              }`} 
+            />
+          </a>
 
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex flex-col items-end">
-          <ul className="flex items-center space-x-8">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.label}>
-                <a 
-                  href={item.href}
-                  className={`text-[9px] font-extrabold tracking-[0.25em] transition-colors duration-300 ${
-                    isScrolled ? 'text-azdark hover:text-azpink' : 'text-azdark/80 hover:text-azpink'
-                  }`}
-                >
-                  {item.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-          {!isScrolled && (
-            <div className="h-px w-24 bg-azpink mt-1 self-end opacity-40"></div>
-          )}
+          {/* Desktop Menu (Visible only on LG+) */}
+          <div className="hidden lg:flex flex-col items-start">
+            <ul className="flex items-center space-x-8">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.label}>
+                  <a 
+                    href={item.href}
+                    className={`text-[9px] font-extrabold tracking-[0.25em] transition-colors duration-300 ${
+                      isScrolled ? 'text-azdark hover:text-azpink' : 'text-azdark/80 hover:text-azpink'
+                    }`}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+            {!isScrolled && (
+              <div className="h-px w-24 bg-azpink mt-1 self-start opacity-40"></div>
+            )}
+          </div>
         </div>
 
-        {/* Mobile Toggle */}
+        {/* Mobile Toggle Button (Always on the right) */}
         <button 
           className="lg:hidden text-azdark p-2 hover:bg-azpink/10 rounded-full transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -60,7 +63,7 @@ const Navbar: React.FC = () => {
         </button>
       </div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu Overlay */}
       <div className={`lg:hidden fixed inset-0 bg-white z-[60] flex flex-col items-center justify-center space-y-10 transition-all duration-500 ease-in-out ${
         isMobileMenuOpen ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full pointer-events-none'
       }`}>
