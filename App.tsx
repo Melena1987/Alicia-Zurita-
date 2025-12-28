@@ -1,16 +1,16 @@
 
 import React from 'react';
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import StrategicAwakening from './components/StrategicAwakening';
-import Projects from './components/Projects';
-import Collaboration from './components/Collaboration';
-import Mentorship from './components/Mentorship';
-import Press from './components/Press';
-import Signals from './components/Signals';
-import Testimonials from './components/Testimonials';
-import Footer from './components/Footer';
+import Navbar from './components/Navbar.tsx';
+import Hero from './components/Hero.tsx';
+import About from './components/About.tsx';
+import StrategicAwakening from './components/StrategicAwakening.tsx';
+import Projects from './components/Projects.tsx';
+import Collaboration from './components/Collaboration.tsx';
+import Mentorship from './components/Mentorship.tsx';
+import Press from './components/Press.tsx';
+import Signals from './components/Signals.tsx';
+import Testimonials from './components/Testimonials.tsx';
+import Footer from './components/Footer.tsx';
 
 const App: React.FC = () => {
   return (

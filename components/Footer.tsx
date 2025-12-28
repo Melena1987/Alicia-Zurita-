@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HEADER_LOGO_URL } from '../constants';
+import { HEADER_LOGO_URL } from '../constants.tsx';
 import { Instagram, Linkedin } from 'lucide-react';
 
 const Footer: React.FC = () => {

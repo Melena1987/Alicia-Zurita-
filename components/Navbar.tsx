@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
-import { NAV_ITEMS, HEADER_LOGO_URL } from '../constants';
+import { NAV_ITEMS, HEADER_LOGO_URL } from '../constants.tsx';
 import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {

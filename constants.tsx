@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { NavItem, Project, Testimonial } from './types';
+import { NavItem, Project, Testimonial } from './types.ts';
 
 export const COLORS = {
   pink: '#ed87ae',

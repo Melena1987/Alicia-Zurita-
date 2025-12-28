@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { TESTIMONIALS } from '../constants';
+import { TESTIMONIALS } from '../constants.tsx';
 
 const Testimonials: React.FC = () => {
   return (
@@ -8,7 +8,6 @@ const Testimonials: React.FC = () => {
       {/* Fixed Background Layer for the large "09" */}
       <div className="absolute inset-0 [clip-path:inset(0)] pointer-events-none z-0">
         <div className="fixed inset-0 flex items-start justify-end p-12">
-           {/* Incrementada la opacidad de azteal/5 a azteal/10 para mejorar visibilidad */}
            <div className="text-[25vw] font-black text-azteal/10 leading-none select-none mt-[-5vw] mr-[-2vw]">
               09
           </div>
@@ -19,7 +18,7 @@ const Testimonials: React.FC = () => {
       <div className="relative z-10 min-h-screen py-32 flex flex-col justify-center">
         <div className="container mx-auto px-6 lg:px-12 max-w-7xl">
             
-            {/* The signature cyan line from the reference */}
+            {/* The signature cyan line */}
             <div className="w-full h-[1.5px] bg-azteal/60 mb-16"></div>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24 items-start">

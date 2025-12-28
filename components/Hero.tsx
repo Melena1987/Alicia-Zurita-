@@ -1,13 +1,13 @@
 
 import React from 'react';
-import { LOGO_URL } from '../constants';
+import { LOGO_URL } from '../constants.tsx';
 
 const Hero: React.FC = () => {
   const bgUrl = "https://firebasestorage.googleapis.com/v0/b/galeriaoficialapp.firebasestorage.app/o/users%2FI5KZz4BuUEfxcoAvSCAWllkQtwt1%2Fphotos%2F1766945069874_Alicia_Zurita__2_.png?alt=media&token=3c71d5fe-458b-44f8-9959-adbda85379e1";
 
   return (
     <div className="relative min-h-[100dvh] flex flex-col justify-end md:justify-center overflow-hidden bg-white">
-      {/* Background Image Layer - Now absolute instead of fixed */}
+      {/* Background Image Layer */}
       <div 
         className="absolute inset-0 bg-no-repeat grayscale-[10%] 
                    bg-cover bg-[position:80%_15%] 
@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
         }}
       />
       
-      {/* Gradient Overlay for Legibility - Now absolute instead of fixed */}
+      {/* Gradient Overlay for Legibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/10 to-transparent 
                       md:bg-gradient-to-r md:from-white md:via-white/40 md:to-transparent
                       lg:via-white/30 z-[1] pointer-events-none" />

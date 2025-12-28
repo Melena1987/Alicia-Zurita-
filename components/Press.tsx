@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { PRESS_LOGOS } from '../constants';
+import { PRESS_LOGOS } from '../constants.tsx';
 
 const Press: React.FC = () => {
   return (
@@ -8,7 +8,6 @@ const Press: React.FC = () => {
       {/* Fixed Background Layer */}
       <div className="absolute inset-0 [clip-path:inset(0)] pointer-events-none z-0">
         <div className="fixed inset-0 bg-azpink flex items-center justify-center">
-           {/* Aumentamos tamaño y visibilidad del número 06 */}
            <div className="absolute -top-10 -left-10 text-[35vw] font-black text-white/10 leading-none select-none">
             06
           </div>
